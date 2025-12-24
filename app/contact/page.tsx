@@ -94,7 +94,7 @@ export default function ContactPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-linear-to-b from-gray-900 to-gray-950"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-[#020617] to-[#050914]"></div>
 
       <div className="relative z-10">
         <section className="pt-20 pb-16 px-2">
@@ -102,57 +102,52 @@ export default function ContactPage() {
             {/* Header */}
             <AnimatedSection>
               <div className="text-center mb-16">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gray-800/50 border border-gray-700/50 mb-6">
-                  <MessageSquare className="w-10 h-10 text-cyan-400" />
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#1E3A8A]/40 border border-[#1E3A8A]/50 mb-6">
+                  <MessageSquare className="w-10 h-10 text-[#0EA5E9]" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                  <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-[#2563EB] to-[#0EA5E9] bg-clip-text text-transparent">
                     راه‌های ارتباطی
                   </span>
                 </h1>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-xl text-blue-200/70 max-w-3xl mx-auto leading-relaxed">
                   برای همکاری در پروژه‌های جدید یا دریافت مشاوره فنی، از طریق
                   کانال‌های زیر با من در ارتباط باشید
                 </p>
 
-                {/* Quick Stats */}
                 <div className="mt-10 flex flex-wrap justify-center gap-8">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400">۱۸h</div>
-                    <div className="text-sm text-gray-500">پاسخ‌گویی</div>
+                    <div className="text-3xl font-bold text-[#0EA5E9]">۱۸h</div>
+                    <div className="text-sm text-blue-200/50">پاسخ‌گویی</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-400">
-                      ۹۷%
-                    </div>
-                    <div className="text-sm text-gray-500">رضایت مشتری</div>
+                    <div className="text-3xl font-bold text-[#2563EB]">۹۷%</div>
+                    <div className="text-sm text-blue-200/50">رضایت مشتری</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-cyan-400">۳+</div>
-                    <div className="text-sm text-gray-500">پروژه موفق</div>
+                    <div className="text-3xl font-bold text-[#0EA5E9]">۳+</div>
+                    <div className="text-sm text-blue-200/50">پروژه موفق</div>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
 
-            {/* Main Content - Two Columns Layout */}
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Left Column */}
               <div className="space-y-8">
-                {/* Contact Methods */}
                 <AnimatedSection delay={0.1}>
-                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8 hover:border-cyan-500/30 transition-all duration-300 shadow-lg hover:shadow-cyan-500/10">
+                  <div className="bg-[#020617]/70 backdrop-blur-sm rounded-xl border border-[#1E3A8A]/60 p-8 hover:border-[#0EA5E9]/50 transition-all duration-300 shadow-lg hover:shadow-[#0EA5E9]/10">
                     <div className="flex items-center gap-3 mb-8">
-                      <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                        <div className="text-cyan-400">
+                      <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center">
+                        <div className="text-[#0EA5E9]">
                           <Zap className="w-6 h-6" />
                         </div>
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-gray-100">
+                        <h2 className="text-xl font-semibold text-blue-100">
                           کانال‌های ارتباطی
                         </h2>
-                        <p className="text-gray-500 text-sm mt-1">
+                        <p className="text-blue-200/50 text-sm mt-1">
                           برای ارتباط مستقیم و فوری
                         </p>
                       </div>
@@ -165,23 +160,23 @@ export default function ContactPage() {
                           href={info.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group flex items-center gap-4 p-4 bg-gray-700/30 rounded-xl border border-gray-600/50 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all duration-300 hover:shadow-md hover:shadow-cyan-500/5"
+                          className="group flex items-center gap-4 p-4 bg-[#020617]/70 rounded-xl border border-[#1E3A8A]/60 hover:border-[#0EA5E9]/50 hover:bg-[#2563EB]/5 transition-all duration-300 hover:shadow-md hover:shadow-[#0EA5E9]/10"
                         >
-                          <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            <div className="text-cyan-400">{info.icon}</div>
+                          <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <div className="text-[#0EA5E9]">{info.icon}</div>
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="font-semibold text-gray-100 text-base mb-1 group-hover:text-cyan-400 transition-colors">
+                            <div className="font-semibold text-blue-100 text-base mb-1 group-hover:text-[#0EA5E9] transition-colors">
                               {info.title}
                             </div>
-                            <div className="text-gray-300 text-sm truncate">
+                            <div className="text-blue-200/70 text-sm truncate">
                               {info.value}
                             </div>
-                            <div className="text-gray-500 text-xs mt-2">
+                            <div className="text-blue-200/40 text-xs mt-2">
                               {info.description}
                             </div>
                           </div>
-                          <div className="text-gray-400 group-hover:text-cyan-400 transition-colors">
+                          <div className="text-blue-200/50 group-hover:text-[#0EA5E9] transition-colors">
                             →
                           </div>
                         </Link>
@@ -190,46 +185,45 @@ export default function ContactPage() {
                   </div>
                 </AnimatedSection>
 
-                {/* Availability Status */}
                 <AnimatedSection delay={0.3}>
-                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8 hover:border-cyan-500/30 transition-all duration-300 shadow-lg hover:shadow-cyan-500/10">
+                  <div className="bg-[#020617]/70 backdrop-blur-sm rounded-xl border border-[#1E3A8A]/60 p-8 hover:border-[#0EA5E9]/50 transition-all duration-300 shadow-lg hover:shadow-[#0EA5E9]/10">
                     <div className="flex items-center justify-between mb-6">
                       <div>
-                        <h3 className="text-lg font-semibold text-gray-100 flex items-center gap-2">
-                          <Clock className="w-5 h-5 text-cyan-400" />
+                        <h3 className="text-lg font-semibold text-blue-100 flex items-center gap-2">
+                          <Clock className="w-5 h-5 text-[#0EA5E9]" />
                           وضعیت دسترسی
                         </h3>
-                        <p className="text-gray-500 text-sm mt-1">
+                        <p className="text-blue-200/50 text-sm mt-1">
                           وضعیت فعلی برای پذیرش پروژه‌های جدید
                         </p>
                       </div>
-                      <div className="flex items-center gap-2 px-2 py-3 w-24 bg-green-500/10 text-green-400 rounded-full text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="">در دسترس</span>
+                      <div className="flex items-center gap-2 px-2 py-3 w-24 bg-[#0EA5E9]/10 text-[#0EA5E9] rounded-full text-sm">
+                        <div className="w-2 h-2 bg-[#0EA5E9] rounded-full animate-pulse"></div>
+                        <span>در دسترس</span>
                       </div>
                     </div>
 
                     <div className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-gray-700/30 rounded-lg p-4 border border-gray-600/50">
-                          <div className="text-xs text-gray-500 mb-1">
+                        <div className="bg-[#020617]/70 rounded-lg p-4 border border-[#1E3A8A]/60">
+                          <div className="text-xs text-blue-200/40 mb-1">
                             پاسخ به ایمیل
                           </div>
-                          <div className="text-green-400 font-semibold">
+                          <div className="text-[#0EA5E9] font-semibold">
                             تا ۲۴ ساعت
                           </div>
                         </div>
-                        <div className="bg-gray-700/30 rounded-lg p-4 border border-gray-600/50">
-                          <div className="text-xs text-gray-500 mb-1">
+                        <div className="bg-[#020617]/70 rounded-lg p-4 border border-[#1E3A8A]/60">
+                          <div className="text-xs text-blue-200/40 mb-1">
                             پیام تلگرام
                           </div>
-                          <div className="text-blue-400 font-semibold">
+                          <div className="text-[#2563EB] font-semibold">
                             تا ۱۲ ساعت
                           </div>
                         </div>
                       </div>
 
-                      <div className="text-gray-400 text-sm leading-relaxed p-3 bg-gray-700/20 rounded-lg">
+                      <div className="text-blue-200/70 text-sm leading-relaxed p-3 bg-[#020617]/60 rounded-lg">
                         معمولاً بین ۹ صبح تا ۶ عصر در دسترس هستم. برای پروژه‌های
                         بزرگ امکان برگزاری جلسه آنلاین وجود دارد.
                       </div>
@@ -240,24 +234,23 @@ export default function ContactPage() {
 
               {/* Right Column */}
               <div className="space-y-8">
-                {/* Quick Information Cards */}
                 <AnimatedSection delay={0.2}>
                   <div className="grid md:grid-cols-3 gap-4">
                     {quickInfo.map((info, index) => (
                       <div
                         key={index}
-                        className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/5 text-center"
+                        className="bg-[#020617]/70 backdrop-blur-sm rounded-xl border border-[#1E3A8A]/60 p-6 hover:border-[#0EA5E9]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#0EA5E9]/10 text-center"
                       >
-                        <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mx-auto mb-4">
-                          <div className="text-cyan-400">{info.icon}</div>
+                        <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center mx-auto mb-4">
+                          <div className="text-[#0EA5E9]">{info.icon}</div>
                         </div>
-                        <div className="text-sm font-semibold text-gray-100 mb-2">
+                        <div className="text-sm font-semibold text-blue-100 mb-2">
                           {info.title}
                         </div>
-                        <div className="text-gray-300 text-sm">
+                        <div className="text-blue-200/70 text-sm">
                           {info.value}
                         </div>
-                        <div className="text-gray-500 text-xs mt-1">
+                        <div className="text-blue-200/40 text-xs mt-1">
                           {info.subValue}
                         </div>
                       </div>
@@ -265,20 +258,19 @@ export default function ContactPage() {
                   </div>
                 </AnimatedSection>
 
-                {/* FAQ Section */}
                 <AnimatedSection delay={0.4}>
-                  <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-8 hover:border-cyan-500/30 transition-all duration-300 shadow-lg hover:shadow-cyan-500/10">
+                  <div className="bg-[#020617]/70 backdrop-blur-sm rounded-xl border border-[#1E3A8A]/60 p-8 hover:border-[#0EA5E9]/50 transition-all duration-300 shadow-lg hover:shadow-[#0EA5E9]/10">
                     <div className="flex items-center gap-3 mb-8">
-                      <div className="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center">
-                        <div className="text-cyan-400">
+                      <div className="w-12 h-12 rounded-xl bg-[#2563EB]/10 flex items-center justify-center">
+                        <div className="text-[#0EA5E9]">
                           <Users className="w-6 h-6" />
                         </div>
                       </div>
                       <div>
-                        <h2 className="text-xl font-semibold text-gray-100">
+                        <h2 className="text-xl font-semibold text-blue-100">
                           سوالات متداول
                         </h2>
-                        <p className="text-gray-500 text-sm mt-1">
+                        <p className="text-blue-200/50 text-sm mt-1">
                           پاسخ به رایج‌ترین سوالات
                         </p>
                       </div>
@@ -288,31 +280,31 @@ export default function ContactPage() {
                       {faqs.map((faq, index) => (
                         <div
                           key={index}
-                          className="group p-4 bg-gray-700/20 rounded-lg border border-gray-600/50 hover:border-cyan-500/30 transition-all duration-300"
+                          className="group p-4 bg-[#020617]/60 rounded-lg border border-[#1E3A8A]/60 hover:border-[#0EA5E9]/50 transition-all duration-300"
                         >
                           <div className="flex items-start gap-3 mb-2">
-                            <div className="w-6 h-6 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0 mt-0.5">
-                              <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
+                            <div className="w-6 h-6 rounded-full bg-[#2563EB]/10 flex items-center justify-center shrink-0 mt-0.5">
+                              <div className="w-2 h-2 rounded-full bg-[#0EA5E9]"></div>
                             </div>
-                            <h3 className="text-base font-semibold text-gray-100 group-hover:text-cyan-400 transition-colors">
+                            <h3 className="text-base font-semibold text-blue-100 group-hover:text-[#0EA5E9] transition-colors">
                               {faq.question}
                             </h3>
                           </div>
-                          <p className="text-gray-400 text-sm leading-relaxed pr-2">
+                          <p className="text-blue-200/70 text-sm leading-relaxed pr-2">
                             {faq.answer}
                           </p>
                         </div>
                       ))}
                     </div>
 
-                    <div className="mt-8 pt-6 border-t border-gray-700/50">
-                      <p className="text-gray-500 text-sm text-center">
+                    <div className="mt-8 pt-6 border-t border-[#1E3A8A]/60">
+                      <p className="text-blue-200/50 text-sm text-center">
                         سوالی دارید که در اینجا یافت نشد؟{" "}
                         <Link
                           href="https://t.me/Dima_devs"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                          className="text-[#0EA5E9] hover:text-[#2563EB] transition-colors font-medium"
                         >
                           از طریق تلگرام بپرسید
                         </Link>
@@ -320,81 +312,25 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </AnimatedSection>
-
-                {/* Status Messages */}
-                <AnimatedSection delay={0.5}>
-                  <div className="space-y-4">
-                    {submitStatus === "success" && (
-                      <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-300 flex items-center gap-3">
-                        <CheckCircle2 className="w-5 h-5 shrink-0" />
-                        <div className="text-sm">
-                          پیام شما با موفقیت ارسال شد. به زودی پاسخ می‌دهم.
-                        </div>
-                      </div>
-                    )}
-
-                    {submitStatus === "error" && (
-                      <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-300 flex items-center gap-3">
-                        <XCircle className="w-5 h-5 shrink-0" />
-                        <div className="text-sm">
-                          خطا در ارسال پیام. لطفاً دوباره تلاش کنید.
-                        </div>
-                      </div>
-                    )}
-
-                    <div className="bg-gray-800/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6 hover:border-cyan-500/30 transition-all duration-300">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center">
-                          <MessageSquare className="w-5 h-5 text-cyan-400" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-semibold text-gray-100">
-                            نکته مهم
-                          </div>
-                          <div className="text-gray-500 text-xs">
-                            برای دریافت پاسخ سریع‌تر
-                          </div>
-                        </div>
-                      </div>
-                      <ul className="space-y-2 text-gray-400 text-sm">
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5"></div>
-                          <span>موضوع پروژه خود را به طور مختصر شرح دهید</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5"></div>
-                          <span>زمان‌بندی و بودجه مورد نظر را ذکر کنید</span>
-                        </li>
-                        <li className="flex items-start gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt=1.5"></div>
-                          <span>
-                            نمونه‌های مشابه از پروژه‌های مشابه را ارائه دهید
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </AnimatedSection>
               </div>
             </div>
 
-            {/* CTA Section */}
             <AnimatedSection delay={0.6}>
               <div className="mt-16 text-center">
-                <div className="relative rounded-2xl bg-linear-to-br from-cyan-500/10 via-purple-500/10 to-cyan-500/10 border border-cyan-500/20 p-8 md:p-12 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500/5 rounded-full blur-3xl"></div>
+                <div className="relative rounded-2xl bg-linear-to-br from-[#2563EB]/10 via-[#1E3A8A]/10 to-[#0EA5E9]/10 border border-[#1E3A8A]/60 p-8 md:p-12 overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#0EA5E9]/10 rounded-full blur-3xl"></div>
 
                   <div className="relative z-10">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/10 text-cyan-300 rounded-full text-sm font-medium mb-4 border border-cyan-500/20">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2563EB]/10 text-[#0EA5E9] rounded-full text-sm font-medium mb-4 border border-[#2563EB]/30">
                       <Zap className="w-4 h-4" />
                       <span>آماده همکاری</span>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-100 mb-3">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-blue-100 mb-3">
                       بیایید با هم کار کنیم!
                     </h3>
-                    <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
+                    <p className="text-blue-200/70 text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
                       برای تبدیل ایده‌های خلاقانه‌تان به محصول دیجیتالی با
                       کیفیت، از طریق کانال‌های ارتباطی بالا با من در تماس باشید.
                     </p>
@@ -402,7 +338,7 @@ export default function ContactPage() {
                     <div className="flex flex-wrap justify-center gap-4">
                       <Link
                         href="mailto:dima.devs.7377@gmail.com"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-cyan-500 to-cyan-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-cyan-700 transition-all duration-300 shadow-lg shadow-cyan-500/20"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-[#2563EB] to-[#0EA5E9] text-white font-medium rounded-lg hover:from-[#1E3A8A] hover:to-[#2563EB] transition-all duration-300 shadow-lg shadow-[#2563EB]/30"
                       >
                         <Mail className="w-4 h-4" />
                         <span>ارسال ایمیل</span>
@@ -411,7 +347,7 @@ export default function ContactPage() {
                         href="https://t.me/Dima_devs"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-blue-500 to-blue-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-blue-500/20"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-linear-to-r from-[#1E3A8A] to-[#2563EB] text-white font-medium rounded-lg hover:from-[#2563EB] hover:to-[#0EA5E9] transition-all duration-300 shadow-lg shadow-[#1E3A8A]/30"
                       >
                         <Send className="w-4 h-4" />
                         <span>پیام در تلگرام</span>

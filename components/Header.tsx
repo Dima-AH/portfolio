@@ -30,7 +30,7 @@ export default function Header() {
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50 shadow-lg"
+          ? "bg-[#020617]/95 backdrop-blur-md border-b border-[#1E3A8A]/60 shadow-lg shadow-[#0EA5E9]/5"
           : "bg-transparent"
       }`}
     >
@@ -42,14 +42,14 @@ export default function Header() {
             className="flex items-center gap-2 group"
             onClick={() => setIsMenuOpen(false)}
           >
-            <div className="w-10 h-10 bg-linear-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
+            <div className="w-10 h-10 bg-linear-to-br from-[#2563EB] to-[#0EA5E9] rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-[#2563EB]/30">
               <Code2 className="w-5 h-5 text-white" />
             </div>
             <div className="hidden sm:block">
-              <span className="text-gray-100 font-bold text-lg block">
+              <span className="text-blue-100 font-bold text-lg block">
                 دیما
               </span>
-              <span className="text-cyan-300 text-xs block">
+              <span className="text-[#0EA5E9] text-xs block">
                 توسعه‌دهنده فرانت‌اند
               </span>
             </div>
@@ -63,20 +63,20 @@ export default function Header() {
                 href={item.path}
                 className={`relative px-1 py-2 text-sm font-medium transition-colors ${
                   pathname === item.path
-                    ? "text-cyan-400"
-                    : "text-gray-400 hover:text-gray-100"
+                    ? "text-[#0EA5E9]"
+                    : "text-blue-200/60 hover:text-blue-100"
                 }`}
               >
                 {item.name}
                 {pathname === item.path && (
-                  <span className="absolute bottom-0 right-0 left-0 h-0.5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 left-0 h-0.5 bg-linear-to-r from-[#2563EB] to-[#0EA5E9] rounded-full"></span>
                 )}
               </Link>
             ))}
             <Link
-              href="/dima-cv.pdf" // مسیر از public
-              download="dima-cv.pdf" // اجبار دانلود
-              className="px-4 py-2 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
+              href="/dima-cv.pdf"
+              download="dima-cv.pdf"
+              className="px-4 py-2 bg-linear-to-r from-[#2563EB] to-[#0EA5E9] text-white text-sm font-medium rounded-lg hover:from-[#1E3A8A] hover:to-[#2563EB] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-[#2563EB]/30"
             >
               <FileText className="w-4 h-4" />
               <span>رزومه</span>
@@ -86,7 +86,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-400 hover:text-gray-100 hover:bg-gray-800 transition-colors"
+            className="md:hidden p-2 rounded-lg text-blue-200/60 hover:text-blue-100 hover:bg-[#1E3A8A]/40 transition-colors"
             aria-label="منو"
           >
             {isMenuOpen ? (
@@ -100,7 +100,7 @@ export default function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden pb-4">
-            <div className="bg-gray-800/95 backdrop-blur-md rounded-xl border border-gray-700/50 p-4 mt-2 shadow-xl">
+            <div className="bg-[#020617]/95 backdrop-blur-md rounded-xl border border-[#1E3A8A]/60 p-4 mt-2 shadow-xl shadow-[#0EA5E9]/5">
               <div className="space-y-2">
                 {navItems.map((item) => (
                   <Link
@@ -109,8 +109,8 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                       pathname === item.path
-                        ? "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
-                        : "text-gray-400 hover:text-gray-100 hover:bg-gray-700/50"
+                        ? "bg-[#0EA5E9]/10 text-[#0EA5E9] border border-[#0EA5E9]/30"
+                        : "text-blue-200/60 hover:text-blue-100 hover:bg-[#1E3A8A]/40"
                     }`}
                   >
                     {item.name}
@@ -120,7 +120,7 @@ export default function Header() {
                   href="/dima-cv.pdf"
                   download="dima-cv.pdf"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex px-4 py-3 text-center bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
+                  className="flex px-4 py-3 text-center bg-linear-to-r from-[#2563EB] to-[#0EA5E9] text-white text-sm font-medium rounded-lg hover:from-[#1E3A8A] hover:to-[#2563EB] transition-all duration-300 items-center justify-center gap-2 shadow-lg shadow-[#2563EB]/30"
                 >
                   <FileText className="w-4 h-4" />
                   <span>دانلود رزومه</span>

@@ -4,75 +4,66 @@
 @layer base {
   :root {
     --font-sans: mahoor, ui-sans-serif, system-ui, sans-serif;
-    
-    /* Black-gray palette */
-    --color-gray-900: #0a0a0a;        /* Purer black */
-    --color-gray-800: #1a1a1a;        /* Black with shade */
-    --color-gray-700: #2a2a2a;        /* Dark gray */
-    --color-gray-600: #404040;        /* Medium-dark gray */
-    --color-gray-500: #666666;        /* Medium gray */
-    --color-gray-400: #959595;        /* Light gray */
-    --color-gray-300: #d4d4d4;        /* Very light gray */
-    --color-gray-200: #e5e5e5;        /* Very very light gray */
-    --color-gray-100: #f5f5f5;        /* Almost white */
-    
-    /* Blue colors for highlights */
-    --color-blue-400: #3b82f6;        /* Light blue */
-    --color-blue-500: #2563eb;        /* Primary blue */
-    --color-blue-600: #1d4ed8;        /* Dark blue */
-    --color-blue-700: #1e40af;        /* Very dark blue */
-    
-    /* Purple colors for variety */
-    --color-purple-400: #a855f7;      /* Light purple */
-    --color-purple-500: #9333ea;      /* Primary purple */
-    --color-purple-600: #7e22ce;      /* Dark purple */
-    
-    /* Cyan colors for focal points */
-    --color-cyan-400: #22d3ee;        /* Light cyan */
-    --color-cyan-500: #06b6d4;        /* Primary cyan */
-    --color-cyan-600: #0891b2;        /* Dark cyan */
-    
-    /* Teal colors for buttons (coordinating with green-purple buttons) */
-    --color-teal-400: #2dd4bf;        /* Light teal */
-    --color-teal-500: #14b8a6;        /* Primary teal */
-    --color-teal-600: #0d9488;        /* Dark teal */
-    
-    /* Additional colors for dark theme */
-    --color-neutral-950: #030712;     /* Main background */
-    --color-neutral-900: #111827;     /* Cards and sections */
-    --color-neutral-800: #1f2937;     /* Header and footer */
-    
-    /* Accent colors */
-    --color-emerald-500: #10b981;     /* Green for success */
-    --color-rose-500: #f43f5e;        /* Red for error */
-    --color-amber-500: #f59e0b;       /* Yellow for warning */
+
+    /* Core brand blues */
+    --primary-1: #1e3a8a; /* deep blue */
+    --primary-2: #2563eb; /* trust blue */
+    --primary-3: #0ea5e9; /* soft cyan */
+
+    /* Neutral dark system */
+    --color-bg-main: #020617; /* ultra dark blue */
+    --color-bg-card: #020a1a; /* glass card bg */
+    --color-bg-soft: #0b1225; /* sections */
+
+    /* Text */
+    --color-text-main: #f8fafc;
+    --color-text-soft: #cbd5f5;
+    --color-text-muted: #93a4c3;
+
+    /* Borders */
+    --color-border-soft: rgba(37, 99, 235, 0.25);
+    --color-border-strong: rgba(14, 165, 233, 0.4);
+
+    /* Glow colors */
+    --glow-primary: rgba(37, 99, 235, 0.45);
+    --glow-cyan: rgba(14, 165, 233, 0.45);
+
+    /* Status */
+    --success: #22c55e;
+    --error: #f43f5e;
+    --warning: #f59e0b;
   }
 }
 
-
 /* Define Mahoor font */
 @font-face {
-  font-family: 'Mahoor';
-  src: url('/fonts/Mahoor-Regular.ttf') format('ttf');
+  font-family: "Mahoor";
+  src: url("/fonts/Mahoor-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --font-mahoor: 'Mahoor', 'Vazirmatn', sans-serif;
+  --font-mahoor: "Mahoor", "Vazirmatn", sans-serif;
 }
 
 /* Custom styles */
 @layer base {
   html {
-    background: #0f172a;
+    background: #020617;
   }
-  
+
   body {
     font-family: var(--font-mahoor);
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-    color: #f8fafc;
+    background: linear-gradient(
+      135deg,
+      #020617 0%,
+      #1e3a8a 45%,
+      #2563eb 70%,
+      #0ea5e9 100%
+    );
+    color: var(--color-text-main);
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -80,22 +71,16 @@
   }
 
   /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
   ::-webkit-scrollbar-track {
-    background: #1e293b;
-    border-radius: 4px;
+    background: #020617;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%);
-    border-radius: 4px;
+    background: linear-gradient(180deg, #2563eb, #0ea5e9);
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #2563eb 0%, #7c3aed 100%);
+    background: linear-gradient(180deg, #1e3a8a, #2563eb);
   }
 
   /* Text selection */
@@ -108,14 +93,14 @@
 @layer components {
   /* Text gradient */
   .gradient-text {
-    background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
+
   .gradient-text-blue {
-    background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+    background: linear-gradient(90deg, #1e3a8a, #0ea5e9);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -123,60 +108,21 @@
 
   /* Glass card */
   .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    background: rgba(14, 165, 233, 0.05);
+    backdrop-filter: blur(14px);
+    border: 1px solid var(--color-border-soft);
+    border-radius: 14px;
   }
 
   /* Buttons */
   .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: linear-gradient(90deg, #58c133 0%, #8b5cf6 100%);
-    color: white;
-    font-weight: 500;
-    font-size: 0.875rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
+    background: linear-gradient(90deg, #1e3a8a, #2563eb, #0ea5e9);
+    box-shadow: 0 0 25px var(--glow-primary);
   }
-  
+
   .btn-primary:hover {
-    background: linear-gradient(90deg, #eb5d25 0%, #7c3aed 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
-  }
-  
-  .btn-primary:active {
-    transform: translateY(0);
-  }
-  
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: transparent;
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 0.875rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-  }
-  
-  .btn-secondary:hover {
-    border-color: rgba(59, 130, 246, 0.3);
-    background: rgba(59, 130, 246, 0.05);
-    transform: translateY(-2px);
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    box-shadow: 0 0 40px var(--glow-cyan);
   }
 
   /* Forms */
@@ -191,17 +137,16 @@
     font-size: 0.875rem;
     transition: all 0.3s ease;
   }
-  
+
   .form-input:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
   }
-  
+
   .form-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
   }
-  
+
   .form-label {
     display: block;
     margin-bottom: 8px;
@@ -218,7 +163,7 @@
     border-radius: 9999px;
     overflow: hidden;
   }
-  
+
   .skill-progress {
     height: 100%;
     border-radius: 9999px;
@@ -235,7 +180,7 @@
     overflow: hidden;
     line-clamp: 2;
   }
-  
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -249,28 +194,28 @@
     animation: fadeIn 0.5s ease-out forwards;
     opacity: 0;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.5s ease-out forwards;
     opacity: 0;
     transform: translateY(20px);
   }
-  
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   .animate-pulse-glow {
     animation: pulseGlow 2s ease-in-out infinite;
   }
 
   /* Shadows */
   .shadow-glow {
-    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
+    box-shadow: 0 0 45px rgba(37, 99, 235, 0.45);
   }
-  
+
   .shadow-glow-purple {
-    box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 0 45px rgba(14, 165, 233, 0.45);
   }
 
   /* Backdrop blur effects */
@@ -278,12 +223,12 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
-  
+
   .backdrop-blur-md {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-  
+
   .backdrop-blur-lg {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -314,7 +259,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -323,7 +269,8 @@
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
   }
@@ -359,12 +306,12 @@
   .no-print {
     display: none !important;
   }
-  
+
   body {
     color: #000000 !important;
     background: #ffffff !important;
   }
-  
+
   .glass-card {
     background: #ffffff !important;
     border: 1px solid #e5e7eb !important;

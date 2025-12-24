@@ -55,7 +55,7 @@ This portfolio is built using modern front-end technologies:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 Follow these steps to run the project locally.
 
@@ -94,7 +94,7 @@ https://bun.sh
 
 ---
 
-## 🏗️ Production Build
+##  Production Build
 
 To generate the optimized production version:
 
@@ -106,7 +106,7 @@ This will create the static output used for deployment on platforms like Render.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 portfolio/
@@ -118,7 +118,7 @@ portfolio/
 
 ---
 
-## 🌍 Live Deployment
+##  Live Deployment
 
 The project is deployed on Render and publicly accessible at:
 
@@ -128,14 +128,14 @@ It uses static export for fast global delivery.
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 This is my personal portfolio project, but feedback and suggestions are always welcome.
 Feel free to open an issue or fork the repository.
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **MIT License**.
 
