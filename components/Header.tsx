@@ -42,7 +42,7 @@ export default function Header() {
             className="flex items-center gap-2 group"
             onClick={() => setIsMenuOpen(false)}
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
+            <div className="w-10 h-10 bg-linear-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
               <Code2 className="w-5 h-5 text-white" />
             </div>
             <div className="hidden sm:block">
@@ -69,18 +69,18 @@ export default function Header() {
               >
                 {item.name}
                 {pathname === item.path && (
-                  <span className="absolute bottom-0 right-0 left-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full"></span>
+                  <span className="absolute bottom-0 right-0 left-0 h-0.5 bg-linear-to-r from-cyan-500 to-purple-500 rounded-full"></span>
                 )}
               </Link>
             ))}
-            <a
+            <Link
               href="/dima-cv.pdf" // مسیر از public
               download="dima-cv.pdf" // اجبار دانلود
-              className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
+              className="px-4 py-2 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center gap-2 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30"
             >
               <FileText className="w-4 h-4" />
               <span>رزومه</span>
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -116,15 +116,15 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
-                <a
+                <Link
                   href="/dima-cv.pdf"
                   download="dima-cv.pdf"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex px-4 py-3 text-center bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
+                  className="flex px-4 py-3 text-center bg-linear-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
                 >
                   <FileText className="w-4 h-4" />
                   <span>دانلود رزومه</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

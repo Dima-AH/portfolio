@@ -34,7 +34,7 @@ export default function Footer() {
           {/* Brand identity and copyright information */}
           <section className="text-center md:text-right" aria-labelledby="footer-brand">
             <div id="footer-brand" className="flex items-center justify-center md:justify-start gap-2 mb-3">
-              <div className="w-8 h-8 hidden md:flex rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+              <div className="w-8 h-8 hidden md:flex rounded-lg bg-linear-to-br from-cyan-500 to-purple-500 items-center justify-center shadow-lg shadow-cyan-500/20">
                 <Code2 className="w-4 h-4 text-white" aria-hidden="true" />
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function Footer() {
                   color: 'hover:bg-purple-500/10 hover:border-purple-500/30 hover:text-purple-400'
                 },
               ].map((social) => (
-                <a
+                <Link
                   key={social.name}
                   href={social.url}
                   target="_blank"
@@ -117,7 +117,7 @@ export default function Footer() {
                   aria-label={social.name}
                 >
                   {social.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </address>

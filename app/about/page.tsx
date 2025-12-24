@@ -181,7 +181,7 @@ export default function AboutPage() {
   return (
     <div className="relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-950"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-gray-900 to-gray-950"></div>
       
       <div className="relative z-10">
         {/* Hero Section */}
@@ -192,23 +192,23 @@ export default function AboutPage() {
                 {/* Profile Avatar Container */}
                 <div className="relative mb-8 flex justify-center">
                   {/* Outer Glow Effects */}
-                  <div className="absolute -inset-8 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 rounded-full blur-3xl opacity-30 animate-pulse"></div>
+                  <div className="absolute -inset-8 bg-linear-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 rounded-full blur-3xl opacity-30 animate-pulse"></div>
                   
                   {/* Main Profile Container */}
                   <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl group">
                     {/* Gradient Background Fallback */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950"></div>
+                    <div className="absolute inset-0 bg-linear-to-br from-gray-800 via-gray-900 to-gray-950"></div>
                     
                     {/* Image Container - Replace this with your logo */}
                     <div className="relative w-full h-full">
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-cyan-500/10 to-purple-500/10">
+                      <div className="w-full h-full flex items-center justify-center bg-linear-to-br from-cyan-500/10 to-purple-500/10">
                         <div className="text-center">
                           <Image width={230} height={230} src="/images/dima.png" alt="Logo" className="object-contain" />
                         </div>
                       </div>
                       
                       {/* Overlay Effects */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-transparent to-gray-900/20"></div>
+                      <div className="absolute inset-0 bg-linear-to-t from-gray-900/40 via-transparent to-gray-900/20"></div>
                       <div className="absolute inset-0 rounded-full border-2 border-cyan-500/20 group-hover:border-cyan-500/40 transition-all duration-500"></div>
                     </div>
                     
@@ -217,12 +217,12 @@ export default function AboutPage() {
                     <div className="absolute -inset-6 rounded-full border-2 border-transparent border-b-purple-500/20 border-l-cyan-500/20"></div>
                     
                     {/* Floating Elements */}
-                    <div className="absolute top-4 left-4 w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600 opacity-70"></div>
-                    <div className="absolute bottom-4 right-4 w-5 h-5 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 opacity-70"></div>
+                    <div className="absolute top-4 left-4 w-6 h-6 rounded-full bg-linear-to-br from-cyan-400 to-cyan-600 opacity-70"></div>
+                    <div className="absolute bottom-4 right-4 w-5 h-5 rounded-full bg-linear-to-br from-purple-400 to-purple-600 opacity-70"></div>
                   </div>
                   
                   {/* Badge */}
-                  <div className="absolute -bottom-3 px-4 py-1.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-medium rounded-full shadow-lg">
+                  <div className="absolute -bottom-3 px-4 py-1.5 bg-linear-to-r from-cyan-500 to-purple-500 text-white text-xs font-medium rounded-full shadow-lg">
                     <span className="flex items-center gap-1.5">
                       <Sparkles className="w-3 h-3" />
                       Frontend Developer
@@ -232,7 +232,7 @@ export default function AboutPage() {
 
                 {/* Title & Description */}
                 <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                     درباره دیما
                   </span>
                 </h1>
@@ -320,7 +320,7 @@ export default function AboutPage() {
                         <div className="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
                           <div
                             ref={setSkillBarRef(index)}
-                            className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-700 ease-out`}
+                            className={`h-full bg-linear-to-r ${skill.color} rounded-full transition-all duration-700 ease-out`}
                             style={{ width: '0%' }}
                             data-width={skill.level + '%'}
                           />
@@ -380,7 +380,7 @@ export default function AboutPage() {
                 
                 <div className="relative">
                   {/* Timeline line */}
-                  <div className="absolute left-4 md:left-auto md:right-1/2 md:transform md:translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gray-600 to-gray-700"></div>
+                  <div className="absolute left-4 md:left-auto md:right-1/2 md:transform md:translate-x-1/2 top-0 bottom-0 w-px bg-linear-to-b from-gray-600 to-gray-700"></div>
                   
                   <div className="space-y-8">
                     {experiences.map((exp, index) => (
@@ -406,7 +406,7 @@ export default function AboutPage() {
                           
                           <div className="md:w-1/2 md:pl-8">
                             <div className="flex items-start gap-3 pl-12 md:pl-0">
-                              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+                              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center shrink-0 mt-1">
                                 <div className="text-cyan-400">
                                   {exp.icon}
                                 </div>

@@ -174,7 +174,7 @@ export default function SkillsPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-gray-950"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-gray-900 to-gray-950"></div>
       
       <div className="relative z-10">
         <section className="pt-20 pb-16 px-4">
@@ -186,7 +186,7 @@ export default function SkillsPage() {
                   <Zap className="w-8 h-8 text-cyan-400" />
                 </div>
                 <h1 className="text-3xl md:text-4xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     مهارت‌ها و تخصص‌ها
                   </span>
                 </h1>
@@ -240,7 +240,7 @@ export default function SkillsPage() {
                             <div className="h-1.5 bg-gray-700/50 rounded-full overflow-hidden">
                               <div
                                 ref={setSkillBarRef(catIndex, skillIndex)}
-                                className={`h-full bg-gradient-to-r ${skill.color} rounded-full transition-all duration-700 ease-out`}
+                                className={`h-full bg-linear-to-r ${skill.color} rounded-full transition-all duration-700 ease-out`}
                                 style={{ width: '0%' }}
                                 data-width={skill.level + '%'}
                               />
