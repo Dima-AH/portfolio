@@ -1,10 +1,3 @@
-این هم **نسخه نهایی همه‌چیز-در-یک README** که مستقیم می‌تونی کپی کنی و داخل `README.md` یا `readme.txt` ریپوی گیت‌هابت بذاری 🧩✨
-
-هیچ وابستگی به اسکرین‌شات نداره و دقیقاً با پورتفولیوی تو مچ شده.
-
----
-
-````md
 <div align="left">
 <img src="/public/logo.png" align="left" height="90" hspace="10px">
 
@@ -79,7 +72,7 @@ https://bun.sh
    ```bash
    git clone https://github.com/Dima-AH/portfolio.git
    cd portfolio
-````
+
 
 2. Install dependencies:
 
