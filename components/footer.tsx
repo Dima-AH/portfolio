@@ -160,7 +160,7 @@ export default function Footer() {
             </span>
             و
             <span className="text-cyan-400 mx-1 font-medium">Next.js 16</span>
-            | طراحی و توسعه توسط Milad Ahmadi
+            | طراحی و توسعه توسط میلاد احمدی
           </p>
           <p className="text-gray-600 text-xs mt-2">
             Performance-focused • SEO Optimized • Mobile Responsive
