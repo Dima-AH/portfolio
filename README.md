@@ -1,5 +1,5 @@
 <div align="left">
-<img src="/public/logo.png" align="left" height="90" hspace="10px">
+<img src="/public/images/dima.png" align="left" height="90" hspace="10px">
 
 # Portfolio 🚀
 
@@ -141,4 +141,4 @@ This project is licensed under the **MIT License**.
 
 ---
 
-Designed and developed with ❤️ by **Dima
+Designed and developed with ❤️ by **Dima**
